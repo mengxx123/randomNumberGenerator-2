@@ -45,3 +45,15 @@ function genNum(){
 $(document).ready(function(){
     genNum();
 });
+
+$("#gen").click( function(){
+    genNum();
+});
+
+$("#show").click( function(){
+    showAns();
+});
+
+$("#hide").click( function(){
+    hideAns();
+});
