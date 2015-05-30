@@ -1,0 +1,46 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+ span.ans::selection {
+   background: white; /* WebKit/Blink Browsers */
+ }
+ span.ans::-moz-selection {
+   background: white; /* Gecko Browsers */
+ }
+
+
+</style>
+
+<div class="setting">
+  <input id="many" name="many" type="text" value="10" /> number of numbers <br>
+  <input id="min" name="min" type="text" value="0" /> min. <br>
+  <input id="max" name="max" type="text" value="1000" /> max. <br>
+  <input name="commit1" onclick="genNum()" type="submit" value="generate numbers" />
+</div>
+
+<div class="numbers">
+<ul> </ul>
+</div>
+
+<input name="commit" onclick="showAns()" type="submit" value="show answers" />
+<input name="commit" onclick="hideAns()" type="submit" value="hide answers" />
+
+
+<!-------------->
+<!-- with erb -->
+<!-------------->
+
+<!-- <div class="setting"> -->
+<!--   <%= text_field_tag("many", "10") %> number of numbers <br> -->
+<!--   <%= text_field_tag("min", "0") %> min. <br> -->
+<!--   <%= text_field_tag("max", "1000") %> max. <br> -->
+<!--   <%= submit_tag("generate numbers", :onclick => "genNum()")  %> -->
+<!-- </div> -->
+
+<!-- <div class="numbers"> -->
+<!-- <ul> </ul> -->
+<!-- </div> -->
+
+<!-- <%= submit_tag("show answers", :onclick => "showAns()")  %> -->
+<!-- <%= submit_tag("hide answers", :onclick => "hideAns()")  %> -->
