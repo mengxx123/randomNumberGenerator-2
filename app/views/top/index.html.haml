@@ -1,4 +1,5 @@
 %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+%script{:src => "http://underscorejs.org/underscore-min.js"}
 
 :css
   span.ans::selection {
@@ -30,6 +31,9 @@
 
 %button{:id => "show", :onclick => "showAns()"} show answers
 %button{:id => "hide", :onclick => "hideAns()"} hide answers
+%br
+%button{:id => "check", :onclick => "checkAns()"} check answers
+%button{:id => "erase", :onclick => "eraseAns()"} erase inputs
 
 
 -# .setting

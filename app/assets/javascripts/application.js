@@ -23,6 +23,26 @@ function showAns(){
     $("span.ans").css({"color": "black"});
 };
 
+function checkAns(){
+    var is = $(".numbers .inp");
+    var as = $(".numbers .ans");
+
+    var ws = _.filter( _.zip(is, as),
+		       function(ia){ return $(ia[0]).val() + "." != $(ia[1]).text(); } );
+
+    if( ws.length != 0 ){
+    	_.each(ws, function(ia){ $(ia[0]).val(""); });
+	alert("wrong!!");
+    } else {
+	alert("correct!!");
+    }
+};
+
+function eraseAns(){
+    $(".inp").val("");
+};
+
+
 function genNum(){
     $(".numbers ul").empty();
     var many = parseInt($("#many").val());
@@ -56,4 +76,12 @@ $("#show").click( function(){
 
 $("#hide").click( function(){
     hideAns();
+});
+
+$("#check").click( function(){
+    checkAns();
+});
+
+$("#erase").click( function(){
+    eraseAns();
 });
