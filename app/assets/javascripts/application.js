@@ -28,7 +28,7 @@ function checkAns(){
     var as = $(".numbers .ans");
 
     var ws = _.filter( _.zip(is, as),
-		       function(ia){ return $(ia[0]).val() + "." != $(ia[1]).text(); } );
+		       function(ia){ return $(ia[0]).val() != $(ia[1]).text(); } );
 
     if( ws.length != 0 ){
     	_.each(ws, function(ia){ $(ia[0]).val(""); });
@@ -40,6 +40,21 @@ function checkAns(){
 
 function eraseAns(){
     $(".inp").val("");
+};
+
+
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
+function shuffleAns(){
+    var as = _.map( $(".numbers .ans"), function(a){ return $(a).text(); } );
+    _.each(_.zip($(".numbers .ans"), shuffle(as)),
+	   function(a){
+	       $(a[0]).text(a[1]);
+	   });
+    eraseAns();
 };
 
 
@@ -56,7 +71,7 @@ function genNum(){
 	$(".numbers ul").append(
 	    $("<li>").append($("<input>").attr({class: "inp", type: "text"}))
                      .append("&nbsp;&nbsp;&nbsp;(")
-                     .append($("<span>").attr({class: "ans"}).text(x.toString() + "."))
+                     .append($("<span>").attr({class: "ans"}).text(x.toString()))
                      .append(")")
 	);
     };
@@ -85,4 +100,8 @@ $("#check").click( function(){
 
 $("#erase").click( function(){
     eraseAns();
+});
+
+$("#shuffle").click( function(){
+    shuffleAns();
 });
