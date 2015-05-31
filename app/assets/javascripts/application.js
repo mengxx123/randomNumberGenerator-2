@@ -48,10 +48,11 @@ function genNum(){
     var many = parseInt($("#many").val());
     var min = parseInt($("#min").val());
     var max = parseInt($("#max").val());
+    var scale = parseInt($("#scale").val());
 
     // .append() study: http://stackoverflow.com/questions/1145208/jquery-how-to-add-li-in-an-existing-ul
     for (i = 0; i < many; i++){
-    	var x = Math.floor(Math.random() * (max - min) + min);
+    	var x = Math.floor(Math.random() * (max - min) + min) * scale;
 	$(".numbers ul").append(
 	    $("<li>").append($("<input>").attr({class: "inp", type: "text"}))
                      .append("&nbsp;&nbsp;&nbsp;(")
