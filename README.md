@@ -6,7 +6,7 @@ you can use this to practice number recognition by listening.
 
 ## How it works
 
-TODO: I will give some pictures or videos to show how it could be used.
+[![Alt text for your video](http://img.youtube.com/vi/jvCaaDdZaJ0/0.jpg)](https://youtu.be/jvCaaDdZaJ0)
 
 ## Futue functions or fixes
 
