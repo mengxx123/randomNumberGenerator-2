@@ -1,0 +1,49 @@
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://underscorejs.org/underscore-min.js'></script>
+<script src='./index.js'></script>
+<style>
+  .numbers {
+   float: left;
+  }
+  .inputs ul {
+  list-style-type: none;
+  list-style-position: inside;
+  }
+  li {
+   height: 20px;
+  }
+  span.ans::selection {
+    background: white; /* WebKit/Blink Browsers */
+  }
+  span.ans::-moz-selection {
+    background: white; /* Gecko Browsers */
+  }
+</style>
+<div class='setting'>
+  <input id='many' value='5'>
+  number of numbers
+  <br>
+  <input id='min' value='100'>
+  min
+  <br>
+  <input id='max' value='1000'>
+  max
+  <br>
+  <input id='scale' value='1'>
+  scale
+  <br>
+  <button id='gen' onclick='genNum()'>generate numbers</button>
+</div>
+<div class='numbers'>
+  <ul></ul>
+</div>
+<div class='inputs'>
+  <ul></ul>
+</div>
+<button id='show' onclick='showAns()'>show answers</button>
+<button id='hide' onclick='hideAns()'>hide answers</button>
+<br>
+<button id='check' onclick='checkAns()'>check answers</button>
+<button id='erase' onclick='eraseAns()'>erase inputs</button>
+<br>
+<button id='shuffle' onclick='shuffleAns()'>shuffle answers</button>
